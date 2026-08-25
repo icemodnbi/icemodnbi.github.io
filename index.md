@@ -4,10 +4,8 @@ author_profile: false # Usually hidden on splash pages for a cleaner look
 header:
   overlay_image: /assets/images/banner-welcome.jpg
   overlay_filter: 0.1 
-excerpt: "at Physics of Ice Climate and Earth, Niels Bohr Institute<br>"
+excerpt: "at Physics of Ice Climate and Earth, Niels Bohr Institute<br><br><br>"
 ---
-
-# About
 
 We investigate the past and future evolution of the Greenland and Antarctic ice sheets to better understand Earth’s climate history and project future sea-level rise. Our research integrates large-scale ice sheet dynamics and small-scale deformation physics with time-evolving boundary conditions. To bridge theory and observation, we constrain our models using unique field data from ice cores and geophysics (radar, seismics) alongside high-resolution satellite datasets.
 
@@ -26,8 +24,8 @@ Our methodology is characterized by a bottom-up approach to building models whil
         </a>
       </div>
       <div class="research-item__content">
-          <div style="margin: 25px 0 0 0; font-size: 0.9rem;"> <b>{{ paper.authors}} ({{ paper.date | date: "%Y" }})</b> </div>
-          <div style="margin: 5px 0 0 0; font-size: 0.9rem;"> <i>{{ paper.title | truncate: 50 }}</i> </div>
+          <div style="margin: 19px 0 0 0; font-size: 1rem;"> <b>{{ paper.authors }} ({{ paper.date | date: "%Y" }})</b> </div>
+          <div style="margin: 6px 0 0 0; font-size: 0.95rem;"> <i>{{ paper.title }}</i> </div>
       </div>
     </div>
 </li>
@@ -56,7 +54,7 @@ Our methodology is characterized by a bottom-up approach to building models whil
 # Meeting calendar
 
 <div class="calendar-container">
-  <iframe src="https://calendar.google.com/calendar/embed?src=cicmodelling%40gmail.com&ctz=Europe/Brussels&mode=AGENDA" style="border: 0" width="1200" height="500" frameborder="0" scrolling="no"></iframe>
+  <iframe src="https://calendar.google.com/calendar/embed?src=cicmodelling%40gmail.com&ctz=Europe/Brussels&mode=AGENDA" style="border: 0" width="100%" height="500" frameborder="0" scrolling="no"></iframe>
 </div>
 
 

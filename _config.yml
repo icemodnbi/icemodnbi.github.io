@@ -8,7 +8,7 @@ subtitle: "Niels Bohr Institute, University of Copenhagen"
 locale: "en-US"
 
 # Specific Theme Settings
-minimal_mistakes_skin: "default" # Options: air, aqua, contrast, etc.
+minimal_mistakes_skin: "mint" # Options: air, aqua, contrast, etc.
 
 site_navigation: main
 

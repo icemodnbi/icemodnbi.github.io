@@ -1,14 +1,16 @@
 ---
 title: "Inverse Problems"
-rank: 11
+rank: 6
 header:
-  overlay_image: /assets/images/banner-inverse.jpg
+  overlay_image: /assets/images/teaser-inverse.jpg
   teaser: /assets/images/teaser-inverse.jpg
-  overlay_filter: 0.15
+  overlay_filter: 0.25
 excerpt: "<br><br><br><br><br><br><br><br><br>"
 ---
 
 ## Papers 
+
+<br>
 
 <div class="entries-grid">
   {% assign sorted_pubs = site.publications | where_exp: "item", "item.categories contains 'inverse'" | sort: 'date' | reverse %}
@@ -20,9 +22,8 @@ excerpt: "<br><br><br><br><br><br><br><br><br>"
         </a>
       </div>
       <div class="research-item__content">
-          <div style="margin: 15px 0 0 0; font-size: 0.9rem;"> <i>{{ paper.title }}</i> </div>
-          <div style="margin: 7px 0 0 0; font-size: 0.9rem;"> <b>{{ paper.authors }}</b> </div>
-          <small><i>{{ paper.venue }}</i>, {{ paper.date | date: "%Y" }}</small>
+          <div style="margin: 19px 0 0 0; font-size: 1rem;"> <b>{{ paper.authors }} ({{ paper.date | date: "%Y" }})</b> </div>
+          <div style="margin: 6px 0 0 0; font-size: 0.95rem;"> <i>{{ paper.title }}</i> </div>
       </div>
     </div>
   {% endfor %}

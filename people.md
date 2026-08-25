@@ -5,11 +5,12 @@ permalink: /people/
 author_profile: false
 header:
   overlay_image: /assets/images/banner-people.jpg
-  overlay_filter: 0.20
-excerpt: <br><br><br><br>
+  overlay_filter: 0.25
+excerpt: <br><br><br><br><br><br>
 ---
 
-{% assign currentgroup = site.people | where: "current", "yes" | sort: "category" | sort: "rank" %}
+<!--{% assign currentgroup = site.people | where: "current", "yes" | sort: "category" | sort: "rank" %} -->
+{% assign currentgroup = site.people | where: "current", "yes" | sort: "title" %} 
 
 # Current Group Members
 
@@ -24,8 +25,9 @@ Our group is a collaborative environment of faculty, postdocs, and students (PhD
       </div>
       <div class="team-member__content">
         <h4 class="team-member__name">{{ person.title }}</h4>
-        <p class="team-member__position">{{ person.position }}</p>
-        <p class="team-member__bio">{{ person.excerpt }}</p>
+        <span class="team-member__position">{{ person.position }}</span>
+        <br>
+        <span class="team-member__bio">{{ person.excerpt }}</span>
       </div>
 </div>
   {% endfor %}

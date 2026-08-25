@@ -1,11 +1,16 @@
 ---
-# Two dashes are mandatory here!
+# Only the main Sass file needs front matter (the dashes are enough)
+search: false
 ---
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; 
-@import "minimal-mistakes";
+@charset "utf-8";
 
-/* Splash video */
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+/* MY ADDITION */
+
+/* --- Splash video --- */
 
 /* Target the video inside the hero */
 .hero-video {
@@ -27,7 +32,51 @@
   overflow: hidden;
 }
 
-/* People */
+/* --- Research --- */
+
+.entries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 300px)); /* grid-template-columns: repeat(auto-fit, minmax(300px, 300px)); */
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.grid__item {
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.research-item__content {
+  text-align: center;
+}
+
+.research-item__thumbnail img {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  min-width: 0;
+  
+  border-radius: 0px; /* "Soft" rounded corners (or 50% for full circles) */
+  object-fit: cover;
+  box-shadow: 1px 5px 20px rgba(0,0,0,0.80); /* x,y offset, blur radius, alpha */
+}
+
+.research-item__title {
+  margin: 19px 0 10px 0 !important;
+  font-size: 1.1rem !important;
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+    
+    &:hover {
+      color: #00adb5;
+    }
+  }
+}
+
+/* --- People --- */
 
 /* Container for the whole team */
 .team-grid {
@@ -52,7 +101,7 @@
   border-radius: 50%;     /* Makes it a circle */
   object-fit: cover;      /* Prevents face-squishing */
   border: 4px solid #f2f3f3;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   margin-bottom: 10px;
   transition: transform 0.3s ease;
 }
@@ -67,66 +116,21 @@
 .team-member__position {
   font-weight: bold;
   color: #666;
-  margin-bottom: 10px;
   text-transform: uppercase;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
+  font-size: 1.0rem;
+  letter-spacing: 1.5px;
 }
 
 .team-member__bio {
-  font-size: 0.9rem;
-  line-height: 1.4;
+  font-size: 1rem;
+//  line-height: 1.0;
   color: #444;
+    font-style: italic; 
+    margin-top:8px; 
+    display:inline-block;
 }
 
-
-/* Research */
-
-/* Research List Container */
-.research-list {
-  margin-top: 2rem;
-}
-
-.research-item-row {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 50px;
-  gap: 40px;
-  border-bottom: 1px solid #f2f3f3;
-  padding-bottom: 30px;
-
-}
-
-/* Rounded Thumbnail */
-.research-item__thumbnail img {
-  width: 300px; /* Slightly larger than the people icons */
-  height: 200px;
-  min-width: 200px;
-  border-radius: 15px; /* "Soft" rounded corners (or 50% for full circles) */
-  object-fit: cover;
-  box-shadow: 0 4px 25px rgba(0,0,0,0.15);
-}
-
-/* Content Area */
-.research-item__content {
-  flex: 1;
-}
-
-.research-item__title {
-  margin: 10px 0 10px 0 !important;
-  font-size: 1.1rem !important;
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-    &:hover {
-      color: #00adb5;
-    }
-  }
-}
-
-
-/* Carousel */
+/* --- Carousel --- */
 
 /* Add a subtle shadow to the "cards" in the carousel */
 .splide__slide .grid__item {
